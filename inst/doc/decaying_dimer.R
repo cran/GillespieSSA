@@ -30,7 +30,7 @@ out <- ssa(
   nu = nu,
   parms = parms,
   tf = tf,
-  method = "D",
+  method = ssa.d(),
   simName = simName,
   verbose = FALSE,
   consoleInterval = 1
@@ -45,8 +45,7 @@ out <- ssa(
   nu = nu,
   parms = parms,
   tf = tf,
-  method = "ETL",
-  tau = 0.003,
+  method = ssa.etl(tau = 0.003),
   simName = simName,
   verbose = FALSE,
   consoleInterval = 1
@@ -61,7 +60,7 @@ out <- ssa(
   nu = nu,
   parms = parms,
   tf = tf,
-  method = "BTL",
+  method = ssa.btl(),
   simName = simName,
   verbose = FALSE,
   consoleInterval = 1
@@ -76,7 +75,7 @@ out <- ssa(
   nu = nu,
   parms = parms,
   tf = tf,
-  method = "OTL",
+  method = ssa.otl(),
   simName = simName,
   verbose = FALSE,
   consoleInterval = 1
